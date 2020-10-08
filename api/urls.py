@@ -6,6 +6,6 @@ from usuarios import api
 urlpatterns = [
     path('', api.home, name='home'),
     path('usuarios/', include('usuarios.urls')),
-    path('usuarios/', obtain_jwt_token),
+    path('login/', obtain_jwt_token),
     path('admin/', admin.site.urls),
 ]
