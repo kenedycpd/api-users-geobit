@@ -1,28 +1,28 @@
 from django.shortcuts import redirect
 from rest_framework import generics
-from .models import Users
-from .serializers import UsersSerializer
+from .models import CustomUser
+from .serializers import CustomUserSerializer
 
 
 def home(request):
     return redirect('usuarios/api/create')
 
 
-class UsersCreateApi(generics.CreateAPIView):
-    queryset = Users.objects.all()
-    serializer_class = UsersSerializer
+class CustomUserCreateApi(generics.CreateAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
 
 
-class UsersListApi(generics.ListAPIView):
-    queryset = Users.objects.all()
-    serializer_class = UsersSerializer
+class CustomUserListApi(generics.ListAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
 
 
-class UsersUpdateApi(generics.RetrieveUpdateAPIView):
-    queryset = Users.objects.all()
-    serializer_class = UsersSerializer
+class CustomUserUpdateApi(generics.RetrieveUpdateAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
 
 
-class UsersDeleteApi(generics.DestroyAPIView):
-    queryset = Users.objects.all()
-    serializer_class = UsersSerializer
+class CustomUserDeleteApi(generics.DestroyAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
