@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Users
 from .serializers import UsersSerializer
+from django.urls import reverse
 
 
 class UsersTest(TestCase):
