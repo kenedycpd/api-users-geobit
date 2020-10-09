@@ -5,7 +5,7 @@ from .serializers import CustomUserSerializer
 
 
 def home(request):
-    return redirect('usuarios/api/create')
+    return redirect('token_obtain_pair')
 
 
 class CustomUserCreateApi(generics.CreateAPIView):
